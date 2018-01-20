@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../../styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../styles/sweetalert.css">
+	<link rel="stylesheet" type="text/css" href="../../styles/index.css">
+	<link rel="stylesheet" type="text/css" href="../../styles/font-awesome.min.css">
+	<link rel="shortcut icon" href="../favicon.ico"/>
+</head>
+<title>BLOG</title>
+<body>
+	<section id="blog">
+		<header></header>
+		<div class="col-md-12 col-sm-12 col-xl-12 one main">
+			<nav class="col-md-1 col-sm-1 col-xl-1 one">
+				<div class="col-md-12 col-sm-12 col-xl-12 one four two menu" v-for="date in news">
+					<div class="three"><a :href="[date.new_tab]" class="five">{{date.name}}</a></div>
+				</div>
+			</nav>
+			<section class="col-md-11 col-sm-11 col-xl-11 one" style="height: 440px;">
+				<div class="col-md-2 col-sm-2 col-xl-2 me">
+					<div class="introduce_img">
+						<img v-bind:src="hade_img" style="width: 140px;height: 140px;border-radius: 100%;">
+						<div class="col-md-12 col-sm-12 col-xl-12 one" v-for="date in my_details" style="margin: 5px 0;font-size: 12px;">
+							<div class="col-md-12 col-sm-12 col-xl-12 one">
+								<strong>{{date.describe}}</strong>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xl-12  one">
+								<span>{{date.details}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-10 col-sm-10 col-xl-10 map" id="map"></div>
+				<div class="col-md-12 col-sm-12 col-xl-12 experience">
+					<div class="col-md-12 col-sm-12 col-xl-12 title">
+						<span class="fa fa-calendar-o" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;{{job_express}}</span>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xl-12 one info">
+						<div class="col-md-12 col-sm-12 col-xl-12 one six" v-for="date in express" style="border-bottom: 1px solid #eee;">
+							<div class="col-md-2 col-sm-2 col-xl-2 one" style="border-right: 1px solid #eee;text-align: center;">
+								<div class="col-md-3 col-sm-3 col-xl-3 one">
+									<div style="margin-top: 15px;font-size: 15px;color: #fff;">
+										<div class="sum">{{date.id}}</div>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9 col-xl-9 one">
+									<p style="margin: 5px 0;">{{date.name}}</p>
+									<p style="margin: 0;">{{date.time}}</p>
+								</div>
+							</div>
+							<div class="col-md-10 col-sm-10 col-xl-10 one" style="padding-top: 5px;padding-left: 10px;">
+								<span>{{date.details}}</span>
+								<p>{{date.load}}：<a :href="[date.url]">{{date.url}}</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="col-md-12 col-sm-12 col-xl-12 one" style="position: fixed;"></footer>
+	</section>
+</body>
+	<script type="text/javascript" src="../../js/vue.js"></script>
+	<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../js/echarts.js"></script>
+	<script type="text/javascript" src="../../js/nav.js"></script>
+	<script type="text/javascript" src="../../js/include.js"></script>
+	<script type="text/javascript" src="../../js/map.js"></script>
+</html>
