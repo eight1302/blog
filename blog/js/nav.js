@@ -70,7 +70,7 @@ new Vue({
 	    	time : '2017.12~至今',
 	    	details : '使用vue/jquery/bootstrap/echarts等,把自己工作一年多的实际使用的技术以及自学的技术,完成一个属于自己的博客网站的前端整个前端的布局设计以及前端的交互设计等.',
 	    	load : '查看路径',
-	    	url : 'https://eight1302.github.io/My_blog/myblog/login.html',
+	    	url : 'https://eight1302.github.io/blog/blog/view/home/index.html',
 	    },{
 	    	id : '17',
 	    	name : '网页版简历(私人)',
