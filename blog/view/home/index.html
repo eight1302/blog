@@ -14,12 +14,26 @@
 	<section id="blog">
 		<header></header>
 		<div class="col-md-12 col-sm-12 col-xl-12 one main">
-			<nav class="col-md-1 col-sm-1 col-xl-1 one">
-				<div class="col-md-12 col-sm-12 col-xl-12 one four two menu" v-for="date in news">
-					<div class="three"><a :href="[date.new_tab]" class="five">{{date.name}}</a></div>
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid"> 
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#example-navbar-collapse">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">首页</a>
+				</div>
+				<div class="collapse navbar-collapse" id="example-navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="ten" v-for="date in news" ><a :href="[date.new_tab]" class="five">{{date.name}}</a></li>
+					</ul>
+				</div>
 				</div>
 			</nav>
-			<section class="col-md-11 col-sm-11 col-xl-11 one" style="height: 440px;">
+			<section class="col-md-12 col-sm-12 col-xl-12 one" style="height: 90%;">
 				<div class="col-md-2 col-sm-2 col-xl-2 me">
 					<div class="introduce_img">
 						<img v-bind:src="hade_img" style="width: 140px;height: 140px;border-radius: 100%;">
